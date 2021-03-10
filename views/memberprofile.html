@@ -1,0 +1,19 @@
+<!DOCTYPE html> 
+
+<html lang="zh-tw">
+    <head>  
+       <title>首頁</title>
+    </head>
+    <body>
+       <h2>會員個人頁面</h2>
+    </body>
+    <script>
+        const url = location.href;
+        if(url.indexOf('member')!=-1)
+        {
+            const memberID = url.split('member/')[1]
+            document.write('你的會員ID是  '+ memberID);
+        };
+    </script>
+
+</html>

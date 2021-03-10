@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .st1{
+        margin:20px;
+        padding: 20px; 
+        border-bottom: 1px solid gray;
+        width: 500px      
+        }
+    .st2{ 
+        width: 400px;
+        text-align: center;
+    }
+
+    .t{
+        width: 100px;
+        float: left;
+        text-align: right;
+    }
+
+    fieldset{
+        width: 500px;
+        border-color: brown;
+        border-radius: 50px;
+        margin: 20px
+    }
+
+    textarea{
+        resize: none
+    }
+</style>
+</head>
+
+<body>
+    <form action="#" , method="GET" , enctype="multipart/form-data">
+        <fieldset>
+            <legend>個人資料(必填)</legend>
+            <!--legend為fieldset標題,會顯示於框線上 -->
+            <div class="st1">
+                <label for="" class="t">性別:</label>
+                <input type="radio" name="gender" id="f1" value="male"><label for="f1">男</label>
+                <input type="radio" name="gender" id="m1" value="female"><label for="m1">女</label>
+            </div>
+
+            <div class="st1">
+                <label class="t" for="account1">姓名:</label>
+                <input type="text"  id="account1" autofocus autocomplete="off" name="account" placeholder="guest">
+            <!--id值連結label的for值,在網頁上游標點選姓名即會跳至欄位,方便使用者輸入-->
+            </div>
+ 
+            <div class="st1">
+                <label class="t" for="pwd">密碼:</label><input type="password" id="pwd" name="pwd" maxlengh="10" required>
+            </div>
+            <div class="st1">
+                <label class="t" for="">網址:</label>
+                <input type="url" name="hp" list="hpurls" value="http://www.">
+                <datalist id="hpurls">
+                    <option value="http://www.google.com/">Google</option>
+                    <option value="http://www.yahoo.com">Yahoo</option>
+                </datalist>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>地址(必填)</legend>
+            <div class="st1">
+                <label class="t">縣市:</label>
+                <select name="add1">
+                    <option value="1">新北市</option>
+                    <option value="2" selected>台北市</option>
+                    <option value="3">基隆市</option>
+                </select>
+            </div>
+            <div class="st1">
+                <label class="t">地址:</label>
+                <input type="text" name="add2" size="30">
+            </div>
+
+            <div class="st1">
+                <label  class="t" for="">日期:</label>
+                <input type="date" name="date1">
+            </div>
+
+        </fieldset>
+
+
+        <fieldset>
+            <legend>哥哥呀哥哥 幫幫忙寫一下</legend>
+
+            <div class="st1">
+                <label class="t">興趣:</label>
+                <input type="checkbox" name="hobby" id="x" value="music"> 音樂
+                <input type="checkbox" name="hobby" id="y" value="sport">運動
+            </div>
+
+            <div class="st1">
+                <label class="t">檔案:</label>
+                <input type="file" name="file1">
+            </div>
+            <div class="st1">
+                <label class="t" for="memo">意見:</label><textarea cols="50" rows="3" id="memo" name="memo"></textarea>
+            </div>
+
+            <div class="st2">
+                <input type="submit" value="送出">
+                <input type="reset" value="清除">
+            </div>
+        </fieldset>
+    </form>
+    <hr>
+    <fieldset>
+        <form action="">
+            <div class="st1">
+                <label class="t" for="">email:</label>
+                <input type="email" name="email">
+            </div>
+
+            <div class="st1">
+                <label class="t" for="">url:</label>
+                <input type="url" name="url" value="http://">
+            </div>
+
+            <div class="st1">
+                <label class="t" for="">search:</label>
+                <input type="search">
+            </div>
+
+            <div class="st2">
+                <input type="submit" value="送出">
+                <input type="reset" value="清除">
+            </div>
+
+            <div class="st1">
+                <label class="t" for="">color:</label>
+                <input type="color" name="color1">
+            </div>
+
+            <div class="st1">
+               <label class="t" for="">range:</label>
+                <input type="range">
+            </div>
+
+            <div class="st1">
+                <label class="t" for="">number:</label>
+                <input type="number" min="0" max="10">
+            </div>
+        </form>
+    </fieldset>
+</body>
+
+</html>
