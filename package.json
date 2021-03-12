@@ -18,9 +18,9 @@
   },
   "homepage": "https://github.com/leodu1228/Web_Practice#readme",
   "devDependencies": {
-    "express": "^4.17.1"
-  },
+},
   "dependencies": {
+    "express": "^4.17.1",
     "ejs": "^3.1.6"
   }
 }
