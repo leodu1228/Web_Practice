@@ -38,6 +38,9 @@
   <p>Password Confirm</p>
   <input id='confirmpassword' type="text" placeholder="密碼確認">
   <hr>
+  <h3>HomeWork3</h3>
+  <div border:></div>
+  <hr>
   </div>
   <div>
     <table>
@@ -98,24 +101,31 @@
   };
 
   const changeAllCheckbox = () => {
+  // .on
+  $("#checkboxall").on("change", ()=>{
+    console.log(".on consoele")
+  })
+
+  // .bind
+  $("#checkboxall").click(()=>{
+    console.log(".bind console")
+  })
+  
+  /* success1:
     if ($("#checkboxall") != undefined) {
       $(".bubble").each((index, val) => {
         val.checked = $("#checkboxall").prop("checked");
       })
     }
-  }
-  /*
-  $("#checkboxall").on('click', ()=>{
-    $("#input_outside .bubble").each( (index, val) => {
-      console.log(val.checked)
-      val.checked = $("#checkboxall").prop('checked')
-    })
-  }, false);
+  */
 
+  /*  success2:
   for (let i=1; i < 4; i++){
   $(`input[class='bubble${i}']`).prop('checked', checkboxAllValue);
   }
   */
+  }
+
 
   const changePassWord = () => {
     console.log($('input #inputpassword'));
