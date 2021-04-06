@@ -38,6 +38,7 @@
 </head>
 
 <body>
+    <button onclick="request()" >ClickMe</button>
     <form action="#" , method="GET" , enctype="multipart/form-data">
         <fieldset>
             <legend>個人資料(必填)</legend>
@@ -152,5 +153,18 @@
         </form>
     </fieldset>
 </body>
+<script>
+    const url = 'http://10.1.1.30:3000/membertest'
+
+    const request = async () => {
+        return fetch(url).then(
+            (res) => {
+                console.log(res)
+                return res;
+            }).catch(err => {
+                throw new Error(err);
+            })
+    }
+</script>
 
 </html>

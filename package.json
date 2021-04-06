@@ -17,10 +17,11 @@
     "url": "https://github.com/leodu1228/Web_Practice/issues"
   },
   "homepage": "https://github.com/leodu1228/Web_Practice#readme",
-  "devDependencies": {
-},
+  "devDependencies": {},
   "dependencies": {
+    "cors": "^2.8.5",
+    "ejs": "^3.1.6",
     "express": "^4.17.1",
-    "ejs": "^3.1.6"
+    "request": "^2.88.2"
   }
 }

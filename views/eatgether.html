@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- meta標籤: 提供網頁內容的資訊給瀏覽器或是搜尋引擎，例如網頁內容的描述、網頁重要關鍵字
+
+        Content-Type==>文件內容格式
+        text/html==> 純文字/超文字
+        charset==> 編碼
+    -->
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <!-- viewport:這個設定可指示瀏覽器如何控制網頁的大小和縮放(響應式網頁)-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- link標籤:  head 區域內的標籤, 控制網頁與外部資源的關係，這裡就是告訴瀏覽器要導入一個在外部的 css 檔案，透過 href 導入名為 bulma.min.css 的樣式檔案 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">   
+
+<body>
+	<div class="eatme-nav eatme-nav-item navbar">
+		<div className="eatme-nav-item navbar-item">
+			<div style="cursor: pointer" class="logo">
+				<img src="./image/logo.png" alt="" width="111" height="40" />
+			</div>
+		</div>
+	</div>
+
+	<div class="eatme-container">
+		<div style="margin: auto; text-align:center; background-color: white;"
+			class="column is-10-tablet is-10-desktop is-10-widescreen is-12-fullhdis-full-mobile is-main-content">
+			<div style="margin: auto;margin-bottom: 25px;width: 560px;">
+				<a class="anchor" href="#new_spec">新功能搶先看</a>
+				‧ 
+				<a class="anchor" href="#gift">限時免費酒杯兌換碼</a>
+				‧ 
+				<a class="anchor" href="#important">重大異動更新</a>
+			</div>
+			<div>
+				<img style="min-width: 560px; height: 306px" src="./image/banner.jpg" />
+			</div>
+			<div style="margin-top: 43px">
+				<p class="title">新版上線，系統停機公告</p>
+			</div>
+			<div style="margin-top: 25px">
+				<p class="time">3/16 00：00 am ~ 3/18 12：00 pm</p>
+			</div>
+			<div style="margin-top: 23px">
+				<p class="content">
+					親愛的各位飯友們大家好，各位期待已久的新版本終於要在3/18 12：00上線了！</br>
+					為了達成各位在 Eatgether 可以有更好的使用體驗，
+					預計於 2021/3/16（二）凌晨00：00 ~ 2021/3/18 中午12：00 進行伺服器停機改版作業，
+					屆時App和Web都將會暫停服務。為了保險起見，請留意您的聚會時間是否與公告期間重疊，建議調整聚會時間或是提前取得對方額外聯絡資訊，造成不便請見諒。
+					Eatgether做為台灣最大聚會交友平台，期待這次新版本上線帶來更穩定的連線品質和更順暢的使用體驗，為了讓聚會成功率翻倍，同時還更新了十多項會員敲碗許願的新功能，搶先帶大家預告本次新增的重點功能：
+				</p>
+			</div>
+			<div class="wrapper">
+				<div class="wrapper_title" id="new_spec">
+					<p>一鍵篩選十大主題，一分鐘找到你想參加的聚會</p>
+				</div>
+				<div class="wrapper_content">
+					<p>
+						新增十大主題篩選功能，贈禮、請客局隨你篩選，並可以同時瀏覽多個城市（例：台北＋新北＋桃園），再加上聚會標題關鍵字搜尋記錄，讓你搜尋無往不利！
+					</p>
+				</div>
+				<div class="wrapper_pic">
+					<img src="./image/pic-a-1.jpg" />
+					<img src="./image/pic-a-2.jpg" />
+				</div>
+			</div>
+			<div class="wrapper">
+				<div class="wrapper_title">
+					<p>評價強化！新增回覆功能、切換瀏覽、評價所屬聚會一目了然</p>
+				</div>
+				<div class="wrapper_content">
+					<p>
+						五星評價系統視覺再優化，聚會的個別評價一目了然，VIP會員新增回覆評價功能，沒說完的感謝，改版後就用評價回覆告訴他；只單純留下評分未留評價的評價歷史，仍然可以保有評分的隱私。
+					</p>
+				</div>
+				<div class="wrapper_pic">
+					<img src="./image/pic-b-1.jpg" />
+					<img src="./image/pic-b-2.jpg" />
+				</div>
+			</div>
+			<div class="wrapper">
+				<div class="wrapper_title">
+					<p>新增聚會草稿與複製功能，新手老手一分鐘聚會馬上辦：</p>
+				</div>
+				<div class="wrapper_content">
+					<p>
+						獨家聚會產生器透過系統引導，新一代聚會懶人包，快速創造你想要的聚會，新增草稿功能，編輯一半跳出App也不怕；新增複製聚會功能，老手主辦聚會更輕鬆。
+					</p>
+				</div>
+				<div class="wrapper_pic">
+					<img src="./image/pic-c-1.jpg" />
+					<img src="./image/pic-c-2.jpg" />
+				</div>
+			</div>
+			<div class="wrapper">
+				<div class="wrapper_title">
+					<p>新增聚會多區刊登和多區宣傳，一指搞定上千人宣傳：</p>
+				</div>
+				<div class="wrapper_content">
+					<p>
+						一場聚會可以刊登在三個城市，不管你是大台北或是高高屏，再也不用煩惱要刊登在哪個城市，同時還可以多地區置頂宣傳，甲地辦也可以乙地宣傳，還可以預設刊登時間，讓你宣傳主辦聚會更容易。
+					</p>
+				</div>
+				<div class="wrapper_pic">
+					<img class="png" src="./image/4-1.png" />
+					<img class="png" src="./image/4-2.png" />
+				</div>
+			</div>
+			<div class="wrapper">
+				<div class="wrapper_title">
+					<p>優質聚會新增酒杯推推，熱門聚會由你推薦：</p>
+				</div>
+				<div class="wrapper_content">
+					<p>
+						看到喜歡的聚會，除了文字留言外，會員將可以用酒杯推薦喜歡的聚會，聚會越多人推薦，將會排到越前面，受到越多人的關注。
+					</p>
+				</div>
+				<div class="wrapper_pic">
+					<img src="./image/pic-e-1.jpg" />
+					<img src="./image/pic-e-2.jpg" />
+				</div>
+			</div>
+			<div class="wrapper">
+				<div class="wrapper_title">
+					<p>通知分類清楚明瞭，好友邀請獨⽴顯⽰更好找</p>
+				</div>
+				<div class="wrapper_content">
+					<p>
+						聊天室的通知可以個別關閉，不用擔心錯失想關注的聚會。公布欄顯示直接改在通知頁面上方，清楚又好找，再也不錯過任何好康活動。
+					</p>
+				</div>
+				<div class="wrapper_pic">
+					<img src="./image/pic-f-1.jpg" />
+					<img src="./image/pic-f-2.jpg" />
+				</div>
+			</div>
+			<div style="margin-top: 42px">
+				<p id="gift" class="content">
+					除了以上，還有可以設定自己的<font class="highlight">用戶代碼</font>
+					，推薦好友加入雙方都可以獲得免費酒杯，更可以在加入當下就看到彼此；會員功能再強化，切換顯示一般、PRO、VIP會員身份，想引人注目或低調隨你喜好；每日登入獎勵除了例行領取30個免費酒杯以外，未來更將不定時發送兌換碼，讓你參加活動領獎更容易！
+					許許多多的新增功能都期待上線之後等你們和我們一起發掘，為了答謝廣大使用者的長期支持，我們預計於改版贈送免費酒杯給大家，<font class="highlight">
+						只要在時限內下載APP並輸入優惠碼兩個都可以依序領取。</font>
+				</p>
+			</div>
+			<div style="margin-top: 25px;height: 240px;">
+				<div style="width:560px;margin:auto">
+					<div style="width: 145px;padding: 28px 50px 27px;" class="block-head">優惠碼</div>
+					<div style="width: 145px;padding: 28px 42px 27px 43px;margin-left: 5px;" class="block-head">酒杯數量
+					</div>
+					<div style="width: 255px;padding: 28px 97px 27px 98px;margin-left: 5px;" class="block-head">兌換時間
+					</div>
+				</div>
+				<div style="width:560px;margin:auto">
+					<div style="width: 145px;padding: 26px 40px 26px 41px;" class="block-body">eggood</div>
+					<div style="width: 145px;padding: 26px 48px 26px 49px;margin-left: 5px;" class="block-body">1000
+					</div>
+					<div style="width: 255px;padding: 26px 30px 26px 31px;margin-left: 5px;" class="block-body">3/18
+						12:00~3/19 11:59</div>
+				</div>
+				<div style="width:560px;margin:auto">
+					<div style="width: 145px;padding: 26px 40px 26px 41px;" class="block-body">eggogo</div>
+					<div style="width: 145px;padding: 26px 48px 26px 49px;margin-left: 5px;" class="block-body">300
+					</div>
+					<div style="width: 255px;padding: 26px 28px 26px 31px;margin-left: 5px;" class="block-body">3/19
+						12:00~3/25 11:59</div>
+				</div>
+			</div>
+			<div class="wrapper" style="margin-top: 60px;">
+				<div id="important" class="wrapper_title">
+					<p>配合本次改版，還有下列重大異動同步公告</p>
+				</div>
+			</div>
+			<div style="margin-top: 35px;">
+				<p class="content">
+					<font class="highlight">🙏取消VIP會員酒杯三倍送優惠：</font>
+					未來所有會員每日領取的酒杯均為30個，但在2021/3/18前購買VIP會籍的會員，仍可享有每日酒杯三倍送的優惠。</br>
+					<font class="highlight">🙏暫停禮物點兌換：</font>兌換禮物改版後暫停運作，未來將再改版回歸，有需求請盡早兌換。</br>
+					<font class="highlight">🙏暫停粉絲團運作：</font>改版後暫時隱藏，未來將增加各種功能後再度回歸。</br>
+					<font class="highlight">🙏移除相關功能：</font>移除禮物盒(iOS)和移除紅包、我的錢包、用餐預算設定，未提領之金額將不得再提領。</br>
+					<font class="highlight">🙏異動好友邀請：</font>
+					好友邀請送出後將不會有消滅時間，直到對方主動取消為止；同時對方收到通知後將進入獨立頁面，未來不會再進入聊天室操作。</br></br>
+					這是各位期待已久的大改版，整個團隊也會竭盡所能的讓這次改版能順利成功，停機期間可以到<a href="https://www.facebook.com/eatgether/">粉絲專頁</a>或<a
+						href="https://www.instagram.com/eatgether_official/">IG</a>關注最新消息，有改版或停機問題可以來信或私訊客服。</br>
+					邀請各位飯友一起見證Eatgether許多新體驗的誕生，一起相約美好聚會時光。
+				</p>
+
+			</div>
+			<div style="margin-top: 130px;">
+				<p class="footer">Eatgether全體團隊</p>
+			</div>
+		</div>
+	</div>
+</body>
+
+<style>
+	.eatme-container {
+		background-color: rgb(237, 237, 237);
+	}
+
+	.anchor {
+		margin: auto;
+		text-Align: center;
+		font-Size: 14px;
+		color: #000000;
+		font-Weight: bold;
+		height: 30px;
+		font-Family: NotoSansCJKtc-Bold;
+		cursor: pointer;
+	}
+
+	.wrapper {
+		margin-top: 50px;
+	}
+
+	.wrapper .wrapper_title {
+		width: 560px;
+		margin: auto;
+		text-Align: center;
+	}
+
+	.wrapper .wrapper_title p {
+		font-family: NotoSansCJKtc;
+		font-size: 18px;
+		font-weight: bold;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: normal;
+		letter-spacing: 1.2px;
+		text-align: center;
+		color: black;
+	}
+
+	.wrapper .wrapper_content {
+		margin: auto;
+		margin-top: 15px;
+		width: 560px;
+	}
+
+	.wrapper .wrapper_content p {
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 30px;
+		letter-spacing: 1.5px;
+		text-align: left;
+		color: black
+	}
+
+	.wrapper .wrapper_pic {
+		margin-top: 23px;
+	}
+
+	.wrapper .wrapper_pic img {
+		display: inline;
+	}
+
+	.wrapper .wrapper_pic .png {
+		display: inline;
+		width: 200px;
+		height: 370px
+	}
+
+	.block-head {
+		height: 75px;
+		background-color: #777777;
+		font-family: NotoSansCJKtc;
+		font-size: 14px;
+		font-weight: bold;
+		letter-spacing: 0.93px;
+		text-align: center;
+		color: #ffffff;
+		float: left;
+	}
+
+	.block-body {
+		height: 75px;
+		background-color: #f7f7f7;
+		font-family: Futura;
+		font-size: 14px;
+		font-weight: bold;
+		letter-spacing: 0.93px;
+		text-align: center;
+		color: black;
+		float: left;
+		margin-top: 5px
+	}
+
+	.title {
+		margin: auto;
+		width: 560px;
+		height: 30px;
+		font-Family: NotoSansCJKtc-Bold;
+		font-Size: 30px;
+		font-Weight: bold;
+		letter-Spacing: 2px;
+		text-Align: center;
+		color: #000000
+	}
+
+	.time {
+		margin: auto;
+		width: 560px;
+		height: 24px;
+		font-family: Futura;
+		font-size: 18px;
+		font-weight: bold;
+		letter-spacing: 2px;
+		text-align: center;
+		color: #ca9c1d
+	}
+
+	.content {
+		margin-top: 23px;
+		width: 560px;
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 30px;
+		letter-spacing: 1.5px;
+		margin: auto;
+		text-align: left;
+		color: black
+	}
+
+	.highlight {
+		font-weight: bold;
+	}
+
+	.picture {
+		display: inline;
+		width: 198px;
+		height: 371px;
+	}
+
+	.footer {
+		background-color: white;
+		width: 560px;
+		height: 27px;
+		margin: auto;
+		font-family: NotoSansCJKtc;
+		font-size: 18px;
+		font-weight: bold;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: normal;
+		letter-spacing: 1.2px;
+		text-align: center;
+		color: black;
+	}
+
+	.eatme-nav {
+		justify-content: space-between;
+		background: white;
+		margin-left: 160px;
+		margin-right: 160px;
+		height: 50px;
+		padding-top: 10px;
+	}
+
+	.eatme-nav-item {
+		display: flex;
+	}
+
+	.eatme-nav-end {
+		justify-content: flex-end;
+	}
+
+	@media (max-width: 540px) { 
+		.eatme-nav {
+			justify-content: space-between;
+			background: white;
+			width: 100vh;
+			height: 50px;
+			padding-top: 10px;
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		.logo {
+			margin-left: 15px;
+			margin-top: 5px;
+		}
+	}
+</style>
+
+</html>

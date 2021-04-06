@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html lang="zh-tw">
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+
+<body>
+  <h2 id="title">會員個人頁面</h2>
+
+  <button onclick="showWord()">show something</button>
+  <button onclick="changeColor()">change color</button>
+
+  <br>
+  <br>
+  <br>
+
+  <hr>
+  <h3>HomeWork1</h3>
+  <div>
+    <input class='bubble'  type='checkbox'>選項一</input>
+    <div>
+      <input class='bubble'  type='checkbox'>選項二</input>
+      <div>
+        <input class='bubble'  type='checkbox'>選項三</input>
+        <div>
+          <input id='checkboxall' type='checkbox' onchange=changeAllCheckbox()>全選/全取消</input>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <h3>HomeWork2</h3>
+  <p>Password</p>
+  <input id='inputpassword' type="text" placeholder="請輸入密碼" onchange="changePassWord()">
+  <br><br>
+  <p>Password Confirm</p>
+  <input id='confirmpassword' type="text" placeholder="密碼確認">
+  <hr>
+  </div>
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <td>name</td>
+          <td>job</td>
+          <td>age</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="name">
+          <td>paddy</td>
+          <td>kisumi</td>
+          <td>dio</td>
+        </tr>
+        <tr>
+          <td>engineer</td>
+          <td>designer</td>
+          <td>engineer</td>
+        </tr>
+        <tr id="age">
+          <td>26</td>
+          <td>26</td>
+          <td>18</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr />
+    <span>動態改變文字</span>
+    </br>
+    <input id="word" onchange="changeWord(event)" />
+    <div id="showWord">此行為待改變的文字</div>
+  </div>
+</body>
+<script>
+  const url = location.href;
+  if (url.indexOf("member") != -1) {
+    const memberID = url.split("member/")[1];
+    document.write("你的會員ID是  " + memberID);
+  }
+
+  const showWord = () => {
+    $("h2").html('<input />')
+  }
+
+  const changeColor = () => {
+    console.log($("#name"));
+    $("#name td").css('background', 'red')
+  };
+
+  const changeWord = (e) => {
+    console.log(e.target);
+    console.log(e.target.value);
+    console.log($("#showWord").html()); // 顯示文字
+    $("#showWord").html(e.target.value); // 改變文字
+  };
+
+  const changeAllCheckbox = () => {
+    if ($("#checkboxall") != undefined) {
+      $(".bubble").each((index, val) => {
+        val.checked = $("#checkboxall").prop("checked");
+      })
+    }
+  }
+  /*
+  $("#checkboxall").on('click', ()=>{
+    $("#input_outside .bubble").each( (index, val) => {
+      console.log(val.checked)
+      val.checked = $("#checkboxall").prop('checked')
+    })
+  }, false);
+
+  for (let i=1; i < 4; i++){
+  $(`input[class='bubble${i}']`).prop('checked', checkboxAllValue);
+  }
+  */
+
+  const changePassWord = () => {
+    console.log($('input #inputpassword'));
+  }
+</script>
+
+<style>
+  td {
+    border: 1px black solid;
+  }
+</style>
+
+</html>
