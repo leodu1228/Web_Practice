@@ -18,6 +18,7 @@
 
   <hr>
   <h3>HomeWork1</h3>
+  <h5>jquery綁定</h5>
   <div>
     <input class='bubble'  type='checkbox'>選項一</input>
     <div>
@@ -25,7 +26,21 @@
       <div>
         <input class='bubble'  type='checkbox'>選項三</input>
         <div>
-          <input id='checkboxall' type='checkbox' onchange=changeAllCheckbox()>全選/全取消</input>
+          <input id='checkboxall' type='checkbox'>全選/全取消</input>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h5>tag綁定</h5>
+  <div>
+    <input class='tagbubble'  type='checkbox'>選項一</input>
+    <div>
+      <input class='tagbubble'  type='checkbox'>選項二</input>
+      <div>
+        <input class='tagbubble'  type='checkbox'>選項三</input>
+        <div>
+          <input id='tagcheckboxall' type='checkbox'>全選/全取消</input>
         </div>
       </div>
     </div>
@@ -33,13 +48,14 @@
   <hr>
   <h3>HomeWork2</h3>
   <p>Password</p>
-  <input id='inputpassword' type="text" placeholder="請輸入密碼" onchange="changePassWord()">
+  <input id='inputpassword' type="text" placeholder="請輸入密碼">
   <br><br>
   <p>Password Confirm</p>
   <input id='confirmpassword' type="text" placeholder="密碼確認">
   <hr>
   <h3>HomeWork3</h3>
-  <div border:></div>
+  <input id = "inputcolor" placeholder="Input color code"></input>
+  <div id = "myDiv" style = "background-color: #004B97"></div> 
   <hr>
   </div>
   <div>
@@ -100,41 +116,48 @@
     $("#showWord").html(e.target.value); // 改變文字
   };
 
-  const changeAllCheckbox = () => {
-  // .on
-  $("#checkboxall").on("change", ()=>{
-    console.log(".on consoele")
-  })
 
-  // .bind
-  $("#checkboxall").click(()=>{
-    console.log(".bind console")
-  })
-  
-  /* success1:
-    if ($("#checkboxall") != undefined) {
-      $(".bubble").each((index, val) => {
-        val.checked = $("#checkboxall").prop("checked");
-      })
+  // Homework1 : jquery 事件綁定.on
+  $("#checkboxall").on("click change",()=>{
+    $(".bubble").each((index, val) => {
+      val.checked = $("#checkboxall").prop("checked");
+    })
+  });
+
+  // Homework1 : tag標籤綁定事件(addEventListener)
+  checkboxtag = document.getElementById('tagcheckboxall');
+  checkboxtag.addEventListener("click", (e)=>{
+    bubbleArray = document.getElementsByClassName("tagbubble");
+    for(let element of bubbleArray){
+      element.checked = checkboxtag.checked;
     }
-  */
-
-  /*  success2:
-  for (let i=1; i < 4; i++){
-  $(`input[class='bubble${i}']`).prop('checked', checkboxAllValue);
-  }
-  */
-  }
+  }, false)
 
 
-  const changePassWord = () => {
-    console.log($('input #inputpassword'));
-  }
+ // Homework2 : 
+$("#inputpassword").on("change", ()=>{
+  inputpassword = $("#inputpassword").val();
+  $("#confirmpassword").val(inputpassword);
+})
+
+
+// Homework3 : 
+$("#inputcolor").on("change", ()=>{
+  inputcolor = $("#inputcolor").val();
+  $("#myDiv").attr("style", `background-color: ${inputcolor}`);
+})
 </script>
 
 <style>
   td {
-    border: 1px black solid;
+    border: 1px brown solid;
+  }
+
+  #myDiv{
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    margin-top: 15px;
   }
 </style>
 
