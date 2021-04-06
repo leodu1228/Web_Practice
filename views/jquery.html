@@ -4,6 +4,7 @@
 
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="../jquery.js"></script>
 </head>
 
 <body>
@@ -58,107 +59,62 @@
   <div id = "myDiv" style = "background-color: #004B97"></div> 
   <hr>
   </div>
+  <h3>HomeWork4</h3>
   <div>
-    <table>
+    <table id="tb">
+    <label for="tb"></label>
       <thead>
-        <tr>
-          <td>name</td>
+        <tr id='col'>
+          <td id ='test'>name</td>
           <td>job</td>
           <td>age</td>
+          <td>gender</td>
         </tr>
       </thead>
       <tbody>
-        <tr id="name">
+        <tr id = 'paddy'>
           <td>paddy</td>
+          <td>engineer</td>
+          <td>26</td>
+          <td>male</td>
+        </tr>
+
+        <tr id='kisumi'> 
           <td>kisumi</td>
-          <td>dio</td>
-        </tr>
-        <tr>
-          <td>engineer</td>
           <td>designer</td>
-          <td>engineer</td>
-        </tr>
-        <tr id="age">
-          <td>26</td>
-          <td>26</td>
           <td>18</td>
+          <td>female</td>
+        </tr>
+
+        <tr id='ollie'>
+          <td>ollie</td>
+          <td>engineer</td>
+          <td>26</td>
+          <td>male</td>
         </tr>
       </tbody>
     </table>
-
-    <hr />
+  </div>
+    <hr/>
     <span>動態改變文字</span>
     </br>
     <input id="word" onchange="changeWord(event)" />
     <div id="showWord">此行為待改變的文字</div>
   </div>
 </body>
-<script>
-  const url = location.href;
-  if (url.indexOf("member") != -1) {
-    const memberID = url.split("member/")[1];
-    document.write("你的會員ID是  " + memberID);
-  }
-
-  const showWord = () => {
-    $("h2").html('<input />')
-  }
-
-  const changeColor = () => {
-    console.log($("#name"));
-    $("#name td").css('background', 'red')
-  };
-
-  const changeWord = (e) => {
-    console.log(e.target);
-    console.log(e.target.value);
-    console.log($("#showWord").html()); // 顯示文字
-    $("#showWord").html(e.target.value); // 改變文字
-  };
-
-
-  // Homework1 : jquery 事件綁定.on
-  $("#checkboxall").on("click change",()=>{
-    $(".bubble").each((index, val) => {
-      val.checked = $("#checkboxall").prop("checked");
-    })
-  });
-
-  // Homework1 : tag標籤綁定事件(addEventListener)
-  checkboxtag = document.getElementById('tagcheckboxall');
-  checkboxtag.addEventListener("click", (e)=>{
-    bubbleArray = document.getElementsByClassName("tagbubble");
-    for(let element of bubbleArray){
-      element.checked = checkboxtag.checked;
-    }
-  }, false)
-
-
- // Homework2 : 
-$("#inputpassword").on("change", ()=>{
-  inputpassword = $("#inputpassword").val();
-  $("#confirmpassword").val(inputpassword);
-})
-
-
-// Homework3 : 
-$("#inputcolor").on("change", ()=>{
-  inputcolor = $("#inputcolor").val();
-  $("#myDiv").attr("style", `background-color: ${inputcolor}`);
-})
-</script>
-
 <style>
-  td {
-    border: 1px brown solid;
-  }
-
   #myDiv{
     width: 200px;
     height: 50px;
     text-align: center;
     margin-top: 15px;
   }
+
+  table,
+  td {
+    border: 1px solid #333;
+  }
+
 </style>
 
 </html>
