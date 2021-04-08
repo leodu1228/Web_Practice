@@ -81,7 +81,6 @@ $(()=>{
 
   // 欄變色
   const rowCount = $('#tb').find('tr').size();
-  console.log($(`tr:eq(0) td:eq(1)`));
 	$('#tb tr td').hover(
 		function () {
 			// mouseenter
