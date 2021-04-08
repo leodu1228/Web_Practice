@@ -37,6 +37,9 @@ app.get('/membertest', (req, res)=>{
 	res.send('Hello Bitch!!');
 })
 
+app.get('/jquery', (req, res)=>{
+})
+
 app.listen(3000, function () {
 	console.log('This is port 3000 Bro !!');
 });
