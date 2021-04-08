@@ -78,4 +78,26 @@ $(()=>{
       $(this).removeClass();
     })  
   })
+
+  // 欄變色
+  const rowCount = $('#tb').find('tr').size();
+  console.log($(`tr:eq(0) td:eq(1)`));
+	$('#tb tr td').hover(
+		function () {
+			// mouseenter
+			const index = $(this).index();
+			for (let i = 0; i < rowCount; i++) {
+				$(`tr:eq(${i}) td:eq(${index})`).addClass('enterOdd');
+			}
+		},
+		function () {
+			// mouseover
+			const index = $(this).index();
+			for (let i = 0; i < rowCount; i++) {
+				$(`tr:eq(${i}) td:eq(${index})`).removeClass();
+			}
+		}
+	);
+
+
 })
