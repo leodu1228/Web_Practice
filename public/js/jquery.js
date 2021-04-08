@@ -1,4 +1,4 @@
-window.onload = () => {
+$(()=>{
   const url = location.href;
   if (url.indexOf("member") != -1) {
     const memberID = url.split("member/")[1];
@@ -78,4 +78,4 @@ window.onload = () => {
       $(this).removeClass();
     })  
   })
-}
+})
